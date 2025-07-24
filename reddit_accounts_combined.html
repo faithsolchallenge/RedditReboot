@@ -1,0 +1,1318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aged Reddit Accounts for Sale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ff4500;
+        }
+
+        .contact-btn {
+            background: #ff4500;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .contact-btn:hover {
+            background: #e03d00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 69, 0, 0.3);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+            padding: 4rem 0;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #333;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero-content p {
+            font-size: 1.25rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        .browse-btn {
+            background: #ff4500;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .browse-btn:hover {
+            background: #e03d00;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 69, 0, 0.4);
+        }
+
+        .reddit-logo {
+            width: 300px;
+            height: 300px;
+            background: #ff4500;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: auto;
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.3);
+        }
+
+        .reddit-icon {
+            width: 180px;
+            height: 180px;
+            background: white;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .reddit-face {
+            width: 120px;
+            height: 80px;
+            background: white;
+            border-radius: 50px;
+            position: relative;
+        }
+
+        .reddit-eyes {
+            display: flex;
+            gap: 20px;
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .eye {
+            width: 12px;
+            height: 12px;
+            background: #ff4500;
+            border-radius: 50%;
+        }
+
+        .reddit-mouth {
+            width: 30px;
+            height: 15px;
+            border: 3px solid #ff4500;
+            border-top: none;
+            border-radius: 0 0 30px 30px;
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .reddit-antenna {
+            width: 4px;
+            height: 30px;
+            background: white;
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            border-radius: 2px;
+        }
+
+        .reddit-antenna::after {
+            content: '';
+            width: 12px;
+            height: 12px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: -6px;
+            left: -4px;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+            padding: 4rem 0;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+        }
+
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: #ff4500;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+        }
+
+        .feature-content h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-content p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Available Accounts */
+        .accounts-section {
+            padding: 4rem 0;
+        }
+
+        .accounts-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .accounts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .account-card {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .account-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+            border-color: #ff4500;
+        }
+
+        .account-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .account-avatar {
+            width: 60px;
+            height: 60px;
+            background: #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .account-avatar svg {
+            width: 30px;
+            height: 30px;
+            fill: #999;
+        }
+
+        .account-info h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+
+        .account-info p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .karma-display {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ff4500;
+            margin-bottom: 1.5rem;
+        }
+
+        .buy-btn {
+            width: 100%;
+            background: #ff4500;
+            color: white;
+            padding: 0.875rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .buy-btn:hover {
+            background: #e03d00;
+            transform: translateY(-2px);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .faq-section h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+
+        .faq-question {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#accounts">Accounts</a>
+                <a href="#faq">FAQ</a>
+            </div>
+            <a href="#contact" class="contact-btn">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Aged Reddit Accounts for Sale</h1>
+                <p>Buy aged Reddit accounts with history and karma</p>
+                <a href="#accounts" class="browse-btn">Browse Accounts</a>
+            </div>
+            <div class="reddit-logo">
+                <div class="reddit-icon">
+                    <div class="reddit-antenna"></div>
+                    <div class="reddit-face">
+                        <div class="reddit-eyes">
+                            <div class="eye"></div>
+                            <div class="eye"></div>
+                        </div>
+                        <div class="reddit-mouth"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C6.47,22 2,17.5 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h3>Aged Accounts</h3>
+                    <p>Accounts created 1 to 10+ years ago</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7,10L12,15L17,10H7Z"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h3>High Karma</h3>
+                    <p>Accounts with high combined karma</p>
+                </div>
+            </div>
+            <div class="feature">
+                <div class="feature-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
+                    </svg>
+                </div>
+                <div class="feature-content">
+                    <h3>Secure Purchase</h3>
+                    <p>Safe and secure checkout process</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="accounts-section" id="accounts">
+            <h2>Available Accounts</h2>
+            <div class="accounts-grid">
+                <div class="account-card">
+                    <div class="account-header">
+                        <div class="account-avatar">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                            </svg>
+                        </div>
+                        <div class="account-info">
+                            <h3>Aged Account</h3>
+                            <p>2 Years Old</p>
+                        </div>
+                    </div>
+                    <div class="karma-display">1,234 Karma</div>
+                    <button class="buy-btn" onclick="showCheckout(); buyAccount('2yr-1234')">Buy</button>
+                </div>
+
+                <div class="account-card">
+                    <div class="account-header">
+                        <div class="account-avatar">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                            </svg>
+                        </div>
+                        <div class="account-info">
+                            <h3>Aged Account</h3>
+                            <p>2 Years Old</p>
+                        </div>
+                    </div>
+                    <div class="karma-display">5,678 Karma</div>
+                    <button class="buy-btn" onclick="showCheckout(); buyAccount('2yr-5678')">Buy</button>
+                </div>
+
+                <div class="account-card">
+                    <div class="account-header">
+                        <div class="account-avatar">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                            </svg>
+                        </div>
+                        <div class="account-info">
+                            <h3>Aged Account</h3>
+                            <p>5 Years Old</p>
+                        </div>
+                    </div>
+                    <div class="karma-display">1,234 Karma</div>
+                    <button class="buy-btn" onclick="showCheckout(); buyAccount('5yr-1234')">Buy</button>
+                </div>
+
+                <div class="account-card">
+                    <div class="account-header">
+                        <div class="account-avatar">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                            </svg>
+                        </div>
+                        <div class="account-info">
+                            <h3>Aged Account</h3>
+                            <p>5 Years Old</p>
+                        </div>
+                    </div>
+                    <div class="karma-display">5,678 Karma</div>
+                    <button class="buy-btn" onclick="showCheckout(); buyAccount('5yr-5678')">Buy</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-section" id="faq">
+            <div class="faq-grid">
+                <div>
+                    <h2>FAQ</h2>
+                    <div class="faq-question">What type of accounts do you sell?</div>
+                    <p>We sell aged Reddit accounts with established posting history and karma. All accounts are legitimate and have been naturally aged over time.</p>
+                    
+                    <div class="faq-question" style="margin-top: 2rem;">How do I receive my account?</div>
+                    <p>After purchase, you'll receive the account credentials via secure email delivery within 24 hours.</p>
+                </div>
+                <div>
+                    <div class="faq-question">Are the accounts safe to use?</div>
+                    <p>Yes, all accounts are created through legitimate means and have natural posting patterns. We ensure account security and authenticity.</p>
+                    
+                    <div class="faq-question" style="margin-top: 2rem;">What payment methods do you accept?</div>
+                    <p>We accept all major payment methods including PayPal, cryptocurrency, and credit cards for your convenience.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function buyAccount(accountId) {
+            alert(`Initiating purchase for account: ${accountId}\n\nYou will be redirected to our secure checkout page.`);
+            // In a real implementation, this would redirect to a payment processor
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add some interactive hover effects
+        document.querySelectorAll('.account-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+
+<div id="checkoutPage" style="display:none;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Aged Reddit Accounts</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #ff4500;
+            text-decoration: none;
+        }
+
+        .back-btn {
+            background: #6c757d;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .back-btn:hover {
+            background: #5a6268;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .checkout-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .checkout-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .checkout-header p {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .checkout-content {
+            display: grid;
+            grid-template-columns: 1fr 400px;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        /* Order Summary */
+        .order-summary {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .order-summary h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .selected-account {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        .account-avatar {
+            width: 50px;
+            height: 50px;
+            background: #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .account-avatar svg {
+            width: 25px;
+            height: 25px;
+            fill: #999;
+        }
+
+        .account-details h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 0.25rem;
+        }
+
+        .account-details p {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .price-breakdown {
+            border-top: 2px solid #f0f0f0;
+            padding-top: 1.5rem;
+        }
+
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+        }
+
+        .price-row.total {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #ff4500;
+            border-top: 2px solid #f0f0f0;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        /* Payment Form */
+        .payment-form {
+            background: white;
+            border-radius: 16px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .form-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .form-section h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #ff4500;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .payment-method {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: #333;
+        }
+
+        .payment-method:hover {
+            border-color: #ff4500;
+            transform: translateY(-2px);
+        }
+
+        .payment-method.active {
+            border-color: #ff4500;
+            background: #fff5f0;
+        }
+
+        .payment-method svg {
+            width: 32px;
+            height: 32px;
+            margin-bottom: 0.5rem;
+            fill: #666;
+        }
+
+        .payment-method span {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .security-info {
+            background: #f0f8ff;
+            border: 1px solid #cce7ff;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .security-info svg {
+            width: 24px;
+            height: 24px;
+            fill: #0066cc;
+            flex-shrink: 0;
+        }
+
+        .security-info p {
+            color: #0066cc;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .terms-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 2rem;
+        }
+
+        .terms-checkbox input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.25rem;
+        }
+
+        .terms-checkbox label {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: normal;
+        }
+
+        .terms-checkbox a {
+            color: #ff4500;
+            text-decoration: none;
+        }
+
+        .terms-checkbox a:hover {
+            text-decoration: underline;
+        }
+
+        .complete-order-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #ff4500, #e03d00);
+            color: white;
+            padding: 1.25rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .complete-order-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(255, 69, 0, 0.4);
+        }
+
+        .complete-order-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+            box-shadow: none;
+        }
+
+        /* Success Animation */
+        .success-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .success-modal {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+            transform: scale(0.8);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .success-modal.show {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #28a745;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+        }
+
+        .success-icon svg {
+            width: 40px;
+            height: 40px;
+            fill: white;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .checkout-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .order-summary {
+                position: static;
+                order: -1;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .payment-methods {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .checkout-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="logo">Reddit Accounts</a>
+            <a href="#" class="back-btn" onclick="goBack()">← Back to Store</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="checkout-header">
+            <h1>Secure Checkout</h1>
+            <p>Complete your purchase safely and securely</p>
+        </div>
+
+        <div class="checkout-content">
+            <div class="payment-form">
+                <form id="checkoutForm">
+                    <!-- Contact Information -->
+                    <div class="form-section">
+                        <h3>
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                            </svg>
+                            Contact Information
+                        </h3>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" required placeholder="John">
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" required placeholder="Doe">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Method -->
+                    <div class="form-section">
+                        <h3>
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.11,4 20,4Z"/>
+                            </svg>
+                            Payment Method
+                        </h3>
+                        <div class="payment-methods">
+                            <div class="payment-method active" onclick="selectPayment('card')">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M20,8H4V6H20M20,18H4V12H20M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.11,4 20,4Z"/>
+                                </svg>
+                                <span>Credit Card</span>
+                            </div>
+                            <div class="payment-method" onclick="selectPayment('paypal')">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M8.32,21.97C8.21,21.97 8.1,21.94 8,21.88C7.8,21.76 7.69,21.55 7.72,21.32L9.77,7.58C9.8,7.34 9.97,7.14 10.2,7.06L16.83,4.93C18.73,4.27 20.74,4.26 22.35,4.9C24.22,5.65 24.71,7.14 23.84,9.93C23.09,12.33 21.84,14.24 20.23,15.5C19.37,16.16 18.44,16.61 17.5,16.83L15.89,17.26L15,21.97H8.32M10.53,8.95L8.94,20.22H13.88L14.53,16.75C14.6,16.33 14.93,16.03 15.36,16.04C16.23,16.07 17.09,15.81 17.85,15.29C19.24,14.35 20.33,12.78 20.95,10.87C21.58,8.95 21.31,8.25 20.23,7.75C19.04,7.2 17.57,7.18 16.15,7.68L10.53,8.95Z"/>
+                                </svg>
+                                <span>PayPal</span>
+                            </div>
+                            <div class="payment-method" onclick="selectPayment('crypto')">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M8,11V13H11V16H13V13H14A2,2 0 0,0 16,11A2,2 0 0,0 14,9H10V8H8V9H7V11H8M10,11H14V11H10V11Z"/>
+                                </svg>
+                                <span>Crypto</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card Details -->
+                    <div class="form-section" id="cardDetails">
+                        <h3>
+                            <svg viewBox="0 0 24 24" width="20" height="20">
+                                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
+                            </svg>
+                            Card Details
+                        </h3>
+                        <div class="form-group">
+                            <label for="cardNumber">Card Number *</label>
+                            <input type="text" id="cardNumber" name="cardNumber" required placeholder="1234 5678 9012 3456" maxlength="19">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="expiryDate">Expiry Date *</label>
+                                <input type="text" id="expiryDate" name="expiryDate" required placeholder="MM/YY" maxlength="5">
+                            </div>
+                            <div class="form-group">
+                                <label for="cvv">CVV *</label>
+                                <input type="text" id="cvv" name="cvv" required placeholder="123" maxlength="4">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="cardName">Name on Card *</label>
+                            <input type="text" id="cardName" name="cardName" required placeholder="John Doe">
+                        </div>
+                    </div>
+
+                    <div class="security-info">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"/>
+                        </svg>
+                        <p>Your payment information is encrypted and secure. We use industry-standard SSL encryption to protect your data.</p>
+                    </div>
+
+                    <div class="terms-checkbox">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">
+                            I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>. I understand that I will receive account credentials via email within 24 hours of purchase.
+                        </label>
+                    </div>
+
+                    <button type="submit" class="complete-order-btn" id="submitBtn">
+                        Complete Order - $49.99
+                    </button>
+                </form>
+            </div>
+
+            <div class="order-summary">
+                <h2>
+                    <svg viewBox="0 0 24 24" width="20" height="20">
+                        <path d="M19,7H22V9H19V12H17V9H14V7H17V4H19V7M12,2C13.1,2 14,2.9 14,4V6H4V4C4,2.9 4.9,2 6,2H12M19,15V17H7V15H19M15,11V13H7V11H15Z"/>
+                    </svg>
+                    Order Summary
+                </h2>
+                
+                <div class="selected-account" id="selectedAccount">
+                    <div class="account-avatar">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12,4A4,4 0 0,1 16,8A4,4 0 0,1 12,12A4,4 0 0,1 8,8A4,4 0 0,1 12,4M12,14C16.42,14 20,15.79 20,18V20H4V18C4,15.79 7.58,14 12,14Z"/>
+                        </svg>
+                    </div>
+                    <div class="account-details">
+                        <h3>Aged Reddit Account</h3>
+                        <p>5 Years Old • 5,678 Karma</p>
+                    </div>
+                </div>
+
+                <div class="price-breakdown">
+                    <div class="price-row">
+                        <span>Account Price:</span>
+                        <span>$45.00</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Processing Fee:</span>
+                        <span>$2.99</span>
+                    </div>
+                    <div class="price-row">
+                        <span>Security Guarantee:</span>
+                        <span>$2.00</span>
+                    </div>
+                    <div class="price-row total">
+                        <span>Total:</span>
+                        <span>$49.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Success Modal -->
+    <div class="success-overlay" id="successOverlay">
+        <div class="success-modal" id="successModal">
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M11,16.5L18,9.5L16.59,8.09L11,13.67L7.41,10.09L6,11.5L11,16.5Z"/>
+                </svg>
+            </div>
+            <h2 style="color: #333; margin-bottom: 1rem;">Order Successful!</h2>
+            <p style="color: #666; margin-bottom: 2rem;">Thank you for your purchase. You will receive your account credentials via email within 24 hours.</p>
+            <button onclick="closeSuccess()" style="background: #28a745; color: white; padding: 0.75rem 2rem; border: none; border-radius: 8px; font-weight: 600; cursor: pointer;">Continue</button>
+        </div>
+    </div>
+
+    <script>
+        let selectedPaymentMethod = 'card';
+
+        // Payment method selection
+        function selectPayment(method) {
+            selectedPaymentMethod = method;
+            document.querySelectorAll('.payment-method').forEach(el => {
+                el.classList.remove('active');
+            });
+            event.target.closest('.payment-method').classList.add('active');
+
+            // Show/hide card details based on selection
+            const cardDetails = document.getElementById('cardDetails');
+            if (method === 'card') {
+                cardDetails.style.display = 'block';
+            } else {
+                cardDetails.style.display = 'none';
+            }
+        }
+
+        // Card number formatting
+        document.getElementById('cardNumber').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+            e.target.value = value;
+        });
+
+        // Expiry date formatting
+        document.getElementById('expiryDate').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length >= 2) {
+                value = value.substring(0, 2) + '/' + value.substring(2, 4);
+            }
+            e.target.value = value;
+        });
+
+        // CVV formatting
+        document.getElementById('cvv').addEventListener('input', function(e) {
+            e.target.value = e.target.value.replace(/\D/g, '');
+        });
+
+        // Form submission
+        document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Processing...';
+
+            // Simulate payment processing
+            setTimeout(() => {
+                showSuccess();
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Complete Order - $49.99';
+            }, 2000);
+        });
+
+        function showSuccess() {
+            const overlay = document.getElementById('successOverlay');
+            const modal = document.getElementById('successModal');
+            
+            overlay.style.display = 'flex';
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 100);
+        }
+
+        function closeSuccess() {
+            const overlay = document.getElementById('successOverlay');
+            const modal = document.getElementById('successModal');
+            
+            modal.classList.remove('show');
+            setTimeout(() => {
+                overlay.style.display = 'none';
+            }, 300);
+        }
+
+        function goBack() {
+            if (confirm('Are you sure you want to leave the checkout? Your progress will be lost.')) {
+                window.history.back();
+            }
+        }
+
+        // Form validation improvements
+        const requiredFields = ['email', 'firstName', 'lastName', 'cardNumber', 'expiryDate', 'cvv', 'cardName'];
+        
+        requiredFields.forEach(fieldId => {
+            const field = document.getElementById(fieldId);
+            if (field) {
+                field.addEventListener('blur', validateField);
+            }
+        });
+
+        function validateField(e) {
+            const field = e.target;
+            if (field.value.trim() === '') {
+                field.style.borderColor = '#dc3545';
+            } else {
+                field.style.borderColor = '#28a745';
+            }
+        }
+
+        // Auto-populate card name from first/last name
+        document.getElementById('firstName').addEventListener('input', updateCardName);
+        document.getElementById('lastName').addEventListener('input', updateCardName);
+
+        function updateCardName() {
+            const firstName = document.getElementById('firstName').value;
+            const lastName = document.getElementById('lastName').value;
+            const cardName = document.getElementById('cardName');
+            
+            if (firstName || lastName) {
+                cardName.value = `${firstName} ${lastName}`.trim();
+            }
+        }
+    </script>
+</body>
+</html>
+</div>
+
+<script>
+function showCheckout() {
+    document.getElementById('checkoutPage').style.display = 'block';
+    window.scrollTo(0, document.body.scrollHeight);
+}
+</script>
+
+</body>
+</html>
